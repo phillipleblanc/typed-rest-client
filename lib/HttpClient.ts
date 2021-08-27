@@ -202,7 +202,7 @@ export class HttpClient implements ifm.IHttpClient {
     }
 
     public del(requestUrl: string, data?: string, additionalHeaders?: ifm.IHeaders): Promise<ifm.IHttpClientResponse> {
-        return this.request('DELETE', requestUrl, data, additionalHeaders || {});
+        return this.request('DELETE', requestUrl, data || null, additionalHeaders || {});
     }
 
     public post(requestUrl: string, data: string, additionalHeaders?: ifm.IHeaders): Promise<ifm.IHttpClientResponse> {

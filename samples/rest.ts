@@ -18,7 +18,7 @@ export async function run() {
         // response.result carries the resource(s)
         //
         cm.heading('get rest obj');
-        let restRes: rm.IRestResponse<cm.HttpBinData> = await restc.get<cm.HttpBinData>('get');
+        let restRes: rm.IRestResponse<cm.HttpBinData> = await restc.del<cm.HttpBinData>('https://httpbin.org/delete');
         console.log(restRes.statusCode, restRes.result['url']);
 
         //

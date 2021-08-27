@@ -149,7 +149,7 @@ describe('Rest Tests', function () {
 
     it('deletes a resource passing Query Parameters', async () => {
         this.timeout(3000);
-        const response: restm.IRestResponse<HttpBinData> = await _rest.del<HttpBinData>('https://httpbin.org/delete', _options);
+        const response: restm.IRestResponse<HttpBinData> = await _rest.del<HttpBinData>('https://httpbin.org/delete','', _options);
 
         assert(response.statusCode == 200, "statusCode should be 200");
         assert(response.result.url === 'https://httpbin.org/delete?id=1&type=compact');
@@ -163,7 +163,7 @@ describe('Rest Tests', function () {
     });
 
     it('deletes a resource with baseUrl passing Query Parameters', async () => {
-        const response: restm.IRestResponse<HttpBinData> = await _restBin.del<HttpBinData>('delete', _options);
+        const response: restm.IRestResponse<HttpBinData> = await _restBin.del<HttpBinData>('delete','', _options);
 
         assert(response.statusCode == 200, "statusCode should be 200");
         assert(response.result.url === 'https://httpbin.org/delete?id=1&type=compact');
