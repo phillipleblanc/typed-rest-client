@@ -14,7 +14,7 @@ export interface IBasicCredentials {
 export interface IHttpClient {
     options(requestUrl: string, additionalHeaders?: IHeaders): Promise<IHttpClientResponse>;
     get(requestUrl: string, additionalHeaders?: IHeaders): Promise<IHttpClientResponse>;
-    del(requestUrl: string, additionalHeaders?: IHeaders): Promise<IHttpClientResponse>;
+    del(requestUrl: string, data?: string, additionalHeaders?: IHeaders): Promise<IHttpClientResponse>;
     post(requestUrl: string, data: string, additionalHeaders?: IHeaders): Promise<IHttpClientResponse>;
     patch(requestUrl: string, data: string, additionalHeaders?: IHeaders): Promise<IHttpClientResponse>;
     put(requestUrl: string, data: string, additionalHeaders?: IHeaders): Promise<IHttpClientResponse>;        

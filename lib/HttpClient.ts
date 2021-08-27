@@ -201,8 +201,8 @@ export class HttpClient implements ifm.IHttpClient {
         return this.request('GET', requestUrl, null, additionalHeaders || {});
     }
 
-    public del(requestUrl: string, additionalHeaders?: ifm.IHeaders): Promise<ifm.IHttpClientResponse> {
-        return this.request('DELETE', requestUrl, null, additionalHeaders || {});
+    public del(requestUrl: string, data?: string, additionalHeaders?: ifm.IHeaders): Promise<ifm.IHttpClientResponse> {
+        return this.request('DELETE', requestUrl, data, additionalHeaders || {});
     }
 
     public post(requestUrl: string, data: string, additionalHeaders?: ifm.IHeaders): Promise<ifm.IHttpClientResponse> {
