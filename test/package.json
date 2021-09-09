@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Microsoft/typed-rest-client#readme",
   "dependencies": {
     "typed-rest-client": "file:../_build"
+  },
+  "devDependencies": {
+    "@types/node": "^10.17.0"
   }
 }
