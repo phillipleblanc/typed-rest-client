@@ -14,8 +14,8 @@ steps:
   displayName: npm run build
 
 # test using node 8.9.1
-- script: npm run units
-  displayName: npm run units
+# - script: npm run units
+#   displayName: npm run units
 
 # test using node 4.8.6
 - task: NodeTool@0
