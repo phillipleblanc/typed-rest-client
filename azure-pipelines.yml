@@ -10,21 +10,21 @@ steps:
   displayName: npm install
 
 # build
-- script: npm run build
-  displayName: npm run build
+# - script: npm run build
+#   displayName: npm run build
 
-# test using node 8.9.1
+# # test using node 8.9.1
 # - script: npm run units
 #   displayName: npm run units
 
-# test using node 4.8.6
-- task: NodeTool@0
-  inputs:
-    versionSpec: "4.8.6"
-  displayName: Install node 4.8.6
+# # test using node 4.8.6
+# - task: NodeTool@0
+#   inputs:
+#     versionSpec: "4.8.6"
+#   displayName: Install node 4.8.6
 
-- script: npm run units
-  displayName: npm run units
+# - script: npm run units
+#   displayName: npm run units
 
 # test using node 6.12.0
 - task: NodeTool@0
