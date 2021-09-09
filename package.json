@@ -37,7 +37,7 @@
     "react-scripts": "1.1.5",
     "semver": "4.3.3",
     "shelljs": "0.7.6",
-    "typescript": "3.1.5"
+    "typescript": "^3.1.5"
   },
   "dependencies": {
     "qs": "^6.9.1",
