@@ -295,6 +295,8 @@ export class HttpClient implements ifm.IHttpClient {
                 // which will leak the open socket.
                 await response.readBody();
 
+                delete headers["Authorization"];
+
                 // let's make the request with the new redirectUrl
                 info = this._prepareRequest(verb, parsedRedirectUrl, headers);
                 response = await this.requestRaw(info, data);
